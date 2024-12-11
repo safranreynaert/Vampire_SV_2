@@ -22,7 +22,11 @@ public class CollectableXp : MonoBehaviour
             GameObject.Destroy(gameObject);
         }
     }
-    
-    
-    
+
+    private void Update()
+    {
+        transform.Rotate(0,0,0.4f);
+    }
+
+
 }

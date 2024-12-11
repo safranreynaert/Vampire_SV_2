@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 
 /// <summary>
 /// Represents an enemy who's moving toward the player
@@ -46,6 +47,7 @@ public class EnemyController : Unit
 
     private void Update()
     {
+        transform.LookAt(_player.transform.position);
         pv = _life;
         if (_life <= 0)
             return;
@@ -68,7 +70,7 @@ public class EnemyController : Unit
         {
             
             Vector3 direction = _player.transform.position - transform.position;
-            direction.y = 0;
+            direction.y = 0f;
 
             float moveStep = _data.MoveSpeed * Time.deltaTime;
             if (moveStep >= direction.magnitude)
