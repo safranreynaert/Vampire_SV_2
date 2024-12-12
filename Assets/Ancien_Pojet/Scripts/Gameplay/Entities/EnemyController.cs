@@ -14,9 +14,10 @@ using UnityEngine.Animations;
 public class EnemyController : Unit
 {
     public GameObject _elecVisu;
-    private Material M_base;
-    public Material M_burn;
     public GameObject Skin;
+    public Animator A_enemy;
+    public Material M_burn;
+    private Material M_base;
 
     float _animburn;
     GameObject _player;
@@ -48,8 +49,7 @@ public class EnemyController : Unit
         _burnDot = data.BurnDot;
         _burnTime = data.BurnTime;
         _stunTime = data.StunTime;
-        M_base = Skin.GetComponent<MeshRenderer>().material;
-
+        M_base = Skin.GetComponent<SkinnedMeshRenderer>().material;
     }
 
     private void Update()
@@ -75,6 +75,8 @@ public class EnemyController : Unit
     {
         if (_stun == false)
         {
+            A_enemy.SetBool("Stun", false);
+
             GameObject.Destroy(go);
             Vector3 direction = _player.transform.position - transform.position;
             direction.y = 0f;
@@ -93,6 +95,7 @@ public class EnemyController : Unit
         }
         else
         {
+            A_enemy.SetBool("Stun", true);
             _rb.constraints = RigidbodyConstraints.FreezePosition;
 
             _timerStun += Time.deltaTime - _time;
@@ -114,11 +117,11 @@ public class EnemyController : Unit
             float _dot = 0;
 
             if (_animburn >= 0.2f + _dot)
-                Skin.GetComponent<MeshRenderer>().material = M_base;
+                Skin.GetComponent<SkinnedMeshRenderer>().material = M_base;
 
             if (_timerBurn >= 1)
             {
-                Skin.GetComponent<MeshRenderer>().material = M_burn;
+                Skin.GetComponent<SkinnedMeshRenderer>().material = M_burn;
                 _dot++;
 
 
@@ -173,9 +176,11 @@ public class EnemyController : Unit
 
     void Die()
     {
+        _rb.constraints = RigidbodyConstraints.FreezePosition;
+        A_enemy.SetBool("Die", true);
         GameObject.Destroy(go);
         MainGameplay.Instance.Enemies.Remove(this);
-        GameObject.Destroy(gameObject);
+        GameObject.Destroy(gameObject, 2);
         var xp = GameObject.Instantiate(MainGameplay.Instance.PrefabXP, transform.position, Quaternion.identity);
         xp.GetComponent<CollectableXp>().Initialize(1);
     }
