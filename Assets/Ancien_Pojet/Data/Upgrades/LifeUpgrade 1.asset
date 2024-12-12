@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46a8eaf7f7549014c8d97c971d54d2b0, type: 3}
-  m_Name: LifeUpgrade
+  m_Name: LifeUpgrade 1
   m_EditorClassIdentifier: 
-  _description: +10% life
+  _description: +20% life
   _sprite: {fileID: 0}
   _upgrade:
     rid: 430911006346575872
   _nextUpgrades:
-  - {fileID: 11400000, guid: 1bb9ab271d9067847ab9102a66af10f3, type: 2}
+  - {fileID: 0}
   references:
     version: 2
     RefIds:
     - rid: 430911006346575872
       type: {class: LifeUpgrade, ns: , asm: Assembly-CSharp}
       data:
-        _multiplier: 1.1
+        _multiplier: 1.3

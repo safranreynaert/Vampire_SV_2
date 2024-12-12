@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46a8eaf7f7549014c8d97c971d54d2b0, type: 3}
-  m_Name: WeaponThunder0
+  m_Name: WeaponWater1
   m_EditorClassIdentifier: 
-  _description: Thunder !!
+  _description: More Water !
   _sprite: {fileID: 21300000, guid: 82176bcef51ab6b4583f29287edb1455, type: 3}
   _upgrade:
     rid: 0
-  _nextUpgrades: []
+  _nextUpgrades:
+  - {fileID: 11400000, guid: 7531f0c7564ba9743b4dca1e9e7ff99e, type: 2}
   references:
     version: 2
     RefIds:
     - rid: 0
       type: {class: WeaponUpgrade, ns: , asm: Assembly-CSharp}
       data:
-        _data: {fileID: 11400000, guid: a575d7763fd3a834abff2b7481cf9cdc, type: 2}
+        _data: {fileID: 11400000, guid: 5a6bdd23ac802e240858b494c44d9df8, type: 2}

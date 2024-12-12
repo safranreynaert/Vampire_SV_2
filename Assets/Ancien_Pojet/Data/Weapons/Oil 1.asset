@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fca8c8437b00b3a4ca793e4e5492b008, type: 3}
-  m_Name: Bullet 1
+  m_Name: Oil 1
   m_EditorClassIdentifier: 
   _weapon:
-    rid: 2272818779803090945
-  _slotIndex: 0
+    rid: 3231548461728661506
+  _slotIndex: 2
   references:
     version: 2
     RefIds:
-    - rid: 2272818779803090945
-      type: {class: WeaponElecBullet, ns: Gameplay.Weapons, asm: Assembly-CSharp}
+    - rid: 3231548461728661506
+      type: {class: WeaponOil, ns: Gameplay.Weapons, asm: Assembly-CSharp}
       data:
-        _damageMin: 6
-        _damageMax: 8
+        _damageMin: 0
+        _damageMax: 0
         _coolDown: 2.5
-        _prefab: {fileID: 3633932044844237191, guid: 4660ac6ef21504147b176616fca71ee3,
+        _prefab: {fileID: 3633932044844237191, guid: 8de1541038ce18044992068f7f0cac3b,
           type: 3}
-        _speed: 10

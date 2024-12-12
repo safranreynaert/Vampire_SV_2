@@ -63,6 +63,7 @@ public class EnemyController : Unit
             player.Hit(Time.deltaTime * _data.DamagePerSeconds);
         }
         DotBurn();
+        GameObject.Destroy(go, 5);
     }
 
     void FixedUpdate()
@@ -172,6 +173,7 @@ public class EnemyController : Unit
 
     void Die()
     {
+        GameObject.Destroy(go);
         MainGameplay.Instance.Enemies.Remove(this);
         GameObject.Destroy(gameObject);
         var xp = GameObject.Instantiate(MainGameplay.Instance.PrefabXP, transform.position, Quaternion.identity);

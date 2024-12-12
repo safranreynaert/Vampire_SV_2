@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5700203623268987358}
   - component: {fileID: 2358857138462098391}
   - component: {fileID: 2860218305294882317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3207283864359876523}
   - component: {fileID: 1611097658991848360}
   - component: {fileID: 8968025648051546474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: oil
   m_TagString: Untagged
   m_Icon: {fileID: 0}

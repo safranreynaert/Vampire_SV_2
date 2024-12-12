@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fca8c8437b00b3a4ca793e4e5492b008, type: 3}
-  m_Name: Bullet 1
+  m_Name: FireBullet 3
   m_EditorClassIdentifier: 
   _weapon:
-    rid: 2272818779803090945
+    rid: 2272818779803090947
   _slotIndex: 0
   references:
     version: 2
     RefIds:
-    - rid: 2272818779803090945
-      type: {class: WeaponElecBullet, ns: Gameplay.Weapons, asm: Assembly-CSharp}
+    - rid: 2272818779803090947
+      type: {class: WeaponFireBullet, ns: Gameplay.Weapons, asm: Assembly-CSharp}
       data:
-        _damageMin: 6
-        _damageMax: 8
-        _coolDown: 2.5
-        _prefab: {fileID: 3633932044844237191, guid: 4660ac6ef21504147b176616fca71ee3,
+        _damageMin: 5
+        _damageMax: 7
+        _coolDown: 1
+        _prefab: {fileID: 3633932044844237191, guid: b2fa4c33c7ab9d34aac9352c68e640af,
           type: 3}
-        _speed: 10
+        _target: {x: 0, y: 0}
+        _speed: 9

@@ -21,10 +21,10 @@ MonoBehaviour:
     - rid: 2272818779803090947
       type: {class: WeaponFireBullet, ns: Gameplay.Weapons, asm: Assembly-CSharp}
       data:
-        _damageMin: 0
-        _damageMax: 0
+        _damageMin: 1
+        _damageMax: 2
         _coolDown: 1
         _prefab: {fileID: 3633932044844237191, guid: b2fa4c33c7ab9d34aac9352c68e640af,
           type: 3}
         _target: {x: 0, y: 0}
-        _speed: 5
+        _speed: 7.5

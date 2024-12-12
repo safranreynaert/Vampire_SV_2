@@ -29,14 +29,18 @@ namespace Gameplay.Weapons
             _timerCoolDown -= _coolDown;
 
 
+            EnemyController enemy = MainGameplay.Instance.GetClosestEnemy(player.transform.position);
+            if (enemy == null)
+                return;
+
             var playerPosition = player.transform.position;
             GameObject go = GameObject.Instantiate(_prefab, playerPosition, Quaternion.identity);
-            Vector3 direction = (Vector3)player.transform.position + new Vector3(1, 0, 1);
+            Vector3 direction = enemy.transform.position - playerPosition;
             if (direction.sqrMagnitude > 0)
             {
                 direction.Normalize();
 
-                go.GetComponent<Bullet>().Initialize(direction, GetDamage(),_speed);
+                go.GetComponent<Bullet>().Initialize(direction, GetDamage(), _speed);
             }
         }
     }
