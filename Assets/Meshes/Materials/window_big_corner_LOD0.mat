@@ -128,7 +128,7 @@ Material:
     - _GlossyReflections: 0
     - _Map_Tiling: 1
     - _Metallic: 0
-    - _Normal_Strenght: 1
+    - _Normal_Strenght: 2
     - _OcclusionStrength: 1
     - _Oclussion: 0.5
     - _Parallax: 0.005
