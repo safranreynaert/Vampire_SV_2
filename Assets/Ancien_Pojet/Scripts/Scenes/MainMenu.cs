@@ -16,5 +16,14 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void OnClickBonus()
+    {
+        SceneManager.LoadScene("Bonus");
+    }
+    public void OnClickBack()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     
 }
