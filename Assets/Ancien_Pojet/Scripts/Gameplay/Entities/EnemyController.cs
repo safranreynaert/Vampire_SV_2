@@ -180,7 +180,7 @@ public class EnemyController : Unit
         _rb.constraints = RigidbodyConstraints.FreezePosition;
         GameObject.Destroy(go);
         MainGameplay.Instance.Enemies.Remove(this);
-        GameObject.Destroy(gameObject, 2.5f);
+        GameObject.Destroy(gameObject, 3f);
         var xp = GameObject.Instantiate(MainGameplay.Instance.PrefabXP, transform.position, Quaternion.identity);
         xp.GetComponent<CollectableXp>().Initialize(1);
     }

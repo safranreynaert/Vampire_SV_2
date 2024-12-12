@@ -6,7 +6,6 @@ using UnityEngine;
 public class LifeBar : MonoBehaviour
 {
     [SerializeField] SpriteRenderer _spriteRenderer;
-
     public void SetValue(float value)
     {
         value = Mathf.Clamp01(value);

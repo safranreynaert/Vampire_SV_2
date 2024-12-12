@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _life: 12
   _damagePerSeconds: 15
-  _moveSpeed: 1
+  _moveSpeed: 4
   _burnDot: 2
   _burnTime: 5
   _stunTime: 1

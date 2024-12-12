@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using Gameplay.Weapons;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 /// <summary>
 /// Represents the player
@@ -14,7 +15,7 @@ public class PlayerController : Unit
     [SerializeField] LevelUpData _levelUpData;
 
     [SerializeField] LifeBar _lifeBar;
-
+    [SerializeField] Vector3 _offsetLife;
     public Action OnDeath { get; set; }
     public Action<int, int, int> OnXP { get; set; }
     public Action<int> OnLevelUp { get; set; }
@@ -59,6 +60,7 @@ public class PlayerController : Unit
 
     void Update()
     {
+        _lifeBar.transform.position = transform.position + _offsetLife;
         if (_isDead)
             return;
 
@@ -83,6 +85,7 @@ public class PlayerController : Unit
         float vertical = Input.GetAxisRaw("Vertical");
 
         _inputs = new Vector3(horizontal,0, vertical);
+
     }
 
 
@@ -104,20 +107,27 @@ public class PlayerController : Unit
 
     private void Move()
     {
+        Quaternion targetRotation = Quaternion.LookRotation(_lastDirection);
+        _rb.MoveRotation(targetRotation);
+
         if (_inputs.sqrMagnitude > 0)
         {
             _inputs.Normalize();
             _rb.velocity = _inputs * _playerData.MoveSpeed;
-            
+
+
             _lastDirection = _inputs;
 
             if (Mathf.Abs(_lastDirection.x) > 0.1f)
+            {
                 _lastDirectionX = _inputs.x;
+            }
         }
         else
         {
             _rb.velocity = new Vector3();
         }
+        
     }
 
     public override void Hit(float damage)

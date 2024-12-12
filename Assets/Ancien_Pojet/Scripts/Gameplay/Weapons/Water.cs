@@ -16,6 +16,7 @@ public class Water : MonoBehaviour
             {
                 GameObject.Destroy(gameObject);
                 other.Stun(_electricity);
+                other.Hit(5);
             }
         }
         
