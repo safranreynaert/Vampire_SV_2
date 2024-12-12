@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3653461830197512240}
   - component: {fileID: 2911448665288469286}
   - component: {fileID: 2023397263803198680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 438dc559566bc2c4b8a30397e2c50f49, type: 3}
+  - {fileID: 6024563423144240279, guid: a7fa87652e796e149bcf74bfcbfdef8f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 162830682666279144}
   - component: {fileID: 4463881748261387903}
   - component: {fileID: 6780442381544115848}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 7654918703708801626}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6, y: 2.69, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -148,7 +148,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 438dc559566bc2c4b8a30397e2c50f49, type: 3}
+  - {fileID: 2100000, guid: 8070b58b6307cfb4a876c21592e44f86, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -182,8 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083dac99c8b707143a39285845f0b23b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timerBurn: 0
-  pv: 0
+  _elecVisu: {fileID: 7834434380170384362, guid: 68101499d07aced4aa0ded4acb624942,
+    type: 3}
+  M_burn: {fileID: 2100000, guid: 8070b58b6307cfb4a876c21592e44f86, type: 2}
+  Skin: {fileID: 6016067004632321566}
   _stun: 0
   _burn: 0
 --- !u!54 &4463881748261387903

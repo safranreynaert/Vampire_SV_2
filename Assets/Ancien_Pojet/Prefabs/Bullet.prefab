@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7268433963375107094}
   - component: {fileID: 1553132972749991385}
   - component: {fileID: 4095175654535571943}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -168,6 +168,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3702744270158900451, guid: 395d5ec7f996d364f94e11cfb40736d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4706428755030410495, guid: 395d5ec7f996d364f94e11cfb40736d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -218,10 +223,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4775127788200153802, guid: 395d5ec7f996d364f94e11cfb40736d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5818205763518135594, guid: 395d5ec7f996d364f94e11cfb40736d3,
         type: 3}
       propertyPath: m_Name
       value: VFX_Trail_Electric
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818205763518135594, guid: 395d5ec7f996d364f94e11cfb40736d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525670300230140358, guid: 395d5ec7f996d364f94e11cfb40736d3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

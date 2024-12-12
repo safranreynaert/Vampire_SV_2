@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   _life: 50
-  _moveSpeed: 4
+  _moveSpeed: 10
   _weapons:
   - {fileID: 11400000, guid: 7fc9e32731c831e46ba0de5e74790c60, type: 2}
   - {fileID: 11400000, guid: 99f917dbb41bb1242953103ce7429ff3, type: 2}

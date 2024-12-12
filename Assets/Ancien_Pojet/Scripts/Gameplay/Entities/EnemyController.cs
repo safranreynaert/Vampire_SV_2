@@ -13,19 +13,25 @@ using UnityEngine.Animations;
 /// </summary>
 public class EnemyController : Unit
 {
+    public GameObject _elecVisu;
+    private Material M_base;
+    public Material M_burn;
+    public GameObject Skin;
+
+    float _animburn;
     GameObject _player;
     Rigidbody _rb;
     EnemyData _data;
     private List<PlayerController> _playersInTrigger = new List<PlayerController>();
-    public float _timerBurn = 0;
+    private float _timerBurn = 0;
     private float _timerStun = 0;
     private float _time;
     private float _burnTime;
     private float _stunTime;
     private float _burnDot;
-    public float pv;
     public bool _stun;
     public bool _burn;
+    GameObject go = null;
 
     private void Awake()
     {
@@ -42,13 +48,13 @@ public class EnemyController : Unit
         _burnDot = data.BurnDot;
         _burnTime = data.BurnTime;
         _stunTime = data.StunTime;
+        M_base = Skin.GetComponent<MeshRenderer>().material;
 
     }
 
     private void Update()
     {
         transform.LookAt(_player.transform.position);
-        pv = _life;
         if (_life <= 0)
             return;
 
@@ -68,7 +74,7 @@ public class EnemyController : Unit
     {
         if (_stun == false)
         {
-            
+            GameObject.Destroy(go);
             Vector3 direction = _player.transform.position - transform.position;
             direction.y = 0f;
 
@@ -104,9 +110,17 @@ public class EnemyController : Unit
     {
         if(_burn == true)
         {
-            
+            float _dot = 0;
+
+            if (_animburn >= 0.2f + _dot)
+                Skin.GetComponent<MeshRenderer>().material = M_base;
+
             if (_timerBurn >= 1)
             {
+                Skin.GetComponent<MeshRenderer>().material = M_burn;
+                _dot++;
+
+
                 _life -= _burnDot;
                 _timerBurn = 0;
                 if (_life <= 0)
@@ -115,6 +129,7 @@ public class EnemyController : Unit
                 }
             }
             _timerBurn += Time.deltaTime - _time;
+            _animburn += Time.deltaTime - _time;
 
             if (_timerBurn > _burnTime)
             {
@@ -136,9 +151,9 @@ public class EnemyController : Unit
     public override void Burn(bool _fire)
     {
         _burn = _fire;
+        _animburn = 0;
         if (_burn == false)
         {
-            _timerBurn = 0;
             _time = Time.deltaTime;
         }
     }
@@ -146,9 +161,11 @@ public class EnemyController : Unit
     public override void Stun(bool _electricity)
     {
         _stun = _electricity;
+        go = GameObject.Instantiate(_elecVisu, transform.position, Quaternion.identity);
         if (_stun == false)
         {
             _time = Time.deltaTime;
+            
         }
     }
 

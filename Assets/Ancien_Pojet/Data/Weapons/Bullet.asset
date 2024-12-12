@@ -21,8 +21,8 @@ MonoBehaviour:
     - rid: 2272818779803090944
       type: {class: WeaponElecBullet, ns: Gameplay.Weapons, asm: Assembly-CSharp}
       data:
-        _damageMin: 10
-        _damageMax: 20
+        _damageMin: 0
+        _damageMax: 0
         _coolDown: 3
         _prefab: {fileID: 3633932044844237191, guid: 4660ac6ef21504147b176616fca71ee3,
           type: 3}
