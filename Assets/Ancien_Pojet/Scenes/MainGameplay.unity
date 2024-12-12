@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 16bc8a9d5451ca44d8f70575adbece3a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -35,7 +35,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_UseRadianceAmbientProbe: 0
@@ -96,8 +96,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a5b06ad7ad17c514cacc768056a9ff31,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 4e8d50606142b3d4e9ad11c53df1a730,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -787,7 +789,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -858,8 +860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 1393278966}
   _speed: 0.3
-  _offset: -25.4
-  _y: 24.9
+  _offset: -30
+  _y: 30
   _topRight: {fileID: 1623486575}
   _bottomLeft: {fileID: 1789567486}
 --- !u!114 &519420034
@@ -1858,6 +1860,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 6027007028617061919, guid: 7211248e7a634fa4dba867b59eadc68f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3905af8343593f44b80e2ab9673e403f, type: 2}
     - target: {fileID: 7293370702996947506, guid: 7211248e7a634fa4dba867b59eadc68f,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1878,6 +1885,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 8186239324291814189, guid: 7211248e7a634fa4dba867b59eadc68f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3905af8343593f44b80e2ab9673e403f, type: 2}
+    - target: {fileID: 8302860048871427079, guid: 7211248e7a634fa4dba867b59eadc68f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3905af8343593f44b80e2ab9673e403f, type: 2}
     - target: {fileID: 8476326793426618211, guid: 7211248e7a634fa4dba867b59eadc68f,
         type: 3}
       propertyPath: m_LocalPosition.y
