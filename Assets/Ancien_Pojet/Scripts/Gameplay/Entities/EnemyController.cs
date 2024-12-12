@@ -75,7 +75,7 @@ public class EnemyController : Unit
     {
         if (_stun == false)
         {
-            A_enemy.SetBool("Stun", false);
+            A_enemy.SetFloat("Stun", 1);
 
             GameObject.Destroy(go);
             Vector3 direction = _player.transform.position - transform.position;
@@ -95,7 +95,7 @@ public class EnemyController : Unit
         }
         else
         {
-            A_enemy.SetBool("Stun", true);
+            A_enemy.SetFloat("Stun", 0);
             _rb.constraints = RigidbodyConstraints.FreezePosition;
 
             _timerStun += Time.deltaTime - _time;
@@ -176,11 +176,11 @@ public class EnemyController : Unit
 
     void Die()
     {
-        _rb.constraints = RigidbodyConstraints.FreezePosition;
         A_enemy.SetBool("Die", true);
+        _rb.constraints = RigidbodyConstraints.FreezePosition;
         GameObject.Destroy(go);
         MainGameplay.Instance.Enemies.Remove(this);
-        GameObject.Destroy(gameObject, 2);
+        GameObject.Destroy(gameObject, 2.5f);
         var xp = GameObject.Instantiate(MainGameplay.Instance.PrefabXP, transform.position, Quaternion.identity);
         xp.GetComponent<CollectableXp>().Initialize(1);
     }

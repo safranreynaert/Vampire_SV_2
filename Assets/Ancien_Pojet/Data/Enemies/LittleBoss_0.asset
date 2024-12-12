@@ -15,5 +15,8 @@ MonoBehaviour:
   _life: 120
   _damagePerSeconds: 20
   _moveSpeed: 2
+  _burnDot: 2
+  _burnTime: 10
+  _stunTime: 2
   _prefab: {fileID: 7654918703708801626, guid: bc63bbf30f2977e4d9ed2c16afa08b56, type: 3}
   _spriteOverride: {fileID: 0}
