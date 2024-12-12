@@ -190,6 +190,8 @@ MonoBehaviour:
   stun: 0
   _oil: 1
   _water: 0
+  _impactVisu: {fileID: 3077343761403282166, guid: f78aaaec3b393e24ca74cd6de8194347,
+    type: 3}
 --- !u!54 &3207283864359876523
 Rigidbody:
   m_ObjectHideFlags: 0

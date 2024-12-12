@@ -54,6 +54,8 @@ MonoBehaviour:
   stun: 0
   _oil: 0
   _water: 1
+  _impactVisu: {fileID: 3077343761403282166, guid: f78aaaec3b393e24ca74cd6de8194347,
+    type: 3}
 --- !u!54 &2752383531947026755
 Rigidbody:
   m_ObjectHideFlags: 0

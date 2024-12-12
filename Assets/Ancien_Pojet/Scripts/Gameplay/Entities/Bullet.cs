@@ -14,6 +14,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] protected bool stun;
     [SerializeField] protected bool _oil;
     [SerializeField] protected bool _water;
+    [SerializeField] protected GameObject _impactVisu;
+
 
     float _speed = 10;
     float _damage = 5;
@@ -41,6 +43,9 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        GameObject go = null;
+        go = GameObject.Instantiate(_impactVisu, transform.position, Quaternion.identity);
+        GameObject.Destroy(go, 1);
         var other = HitWithParent.GetComponent<Unit>(col);
         var enemy = HitWithParent.GetComponent<EnemyController>(col);
 
@@ -54,7 +59,8 @@ public class Bullet : MonoBehaviour
         
         else if (other.Team != _team)
         {
-            if(_water == false && _oil == false)
+
+            if (_water == false && _oil == false)
             {
                 GameObject.Destroy(gameObject);
             }
